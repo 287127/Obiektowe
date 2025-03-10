@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alexx\\Desktop\\School\\Sem2\\Programowanie Obiektowe\\Repozytorium\\Zaj1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE304BA1-5444-43A8-970E-D01FEE1F9872}|Zaj1\\Zaj1.vcxproj|C:\\Users\\Alexx\\Desktop\\School\\Sem2\\Programowanie Obiektowe\\Repozytorium\\Zaj1\\Zaj1\\Zaj1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE304BA1-5444-43A8-970E-D01FEE1F9872}|Zaj1\\Zaj1.vcxproj|solutionrelative:Zaj1\\Zaj1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Zaj1.cpp",
+              "DocumentMoniker": "C:\\Users\\Alexx\\Desktop\\School\\Sem2\\Programowanie Obiektowe\\Repozytorium\\Zaj1\\Zaj1\\Zaj1.cpp",
+              "RelativeDocumentMoniker": "Zaj1\\Zaj1.cpp",
+              "ToolTip": "C:\\Users\\Alexx\\Desktop\\School\\Sem2\\Programowanie Obiektowe\\Repozytorium\\Zaj1\\Zaj1\\Zaj1.cpp",
+              "RelativeToolTip": "Zaj1\\Zaj1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-10T16:54:45.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
