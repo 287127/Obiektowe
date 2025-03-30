@@ -1,104 +1,114 @@
 ﻿#include <iostream>
 
-double pamiec;
-bool pamiec_uzyta;
+double mem;
+bool mem_used;
 double a;
 double b;
-
-void wyczysc() {
-	pamiec = 0;
-	pamiec_uzyta = false;
-}
+int n;
 
 void Menu() {
-	std::cout << "Menu:" << std::endl;
-	std::cout << " 1) +" << " " << "2) -" << std::endl;
-	std::cout << " 3) *" << " " << "4) /" << std::endl;
-	std::cout << " 5) %" << " " << "6) Wyczysc pamiec" << std::endl;
+	std::cout << "Menu: " << std::endl;
+	std::cout << " 1) +" << " " << " 2) -" << std::endl;
+	std::cout << " 3) *" << " " << " 4) /" << std::endl;
+	std::cout << " 5) %" << " " << " 6) Wyczysc pamiec" << std::endl;
 	std::cout << " 7) Zakoncz" << std::endl;
+	std::cout << "Wybierz opcje:" << std::endl;
 }
 
-double dodawanie(double a, double b) {
-	pamiec = a + b;
-	std::cout << pamiec << std::endl;
-	pamiec_uzyta = true;
-	return pamiec;
-}
-double odejmowanie(double a, double b) {
-	pamiec = a - b;
-	std::cout << pamiec << std::endl;
-	pamiec_uzyta = true;
-	return pamiec;
-}
-double iloczyn(double a, double b) {
-	pamiec = a * b;
-	std::cout << pamiec << std::endl;
-	pamiec_uzyta = true;
-	return pamiec;
-}
-double iloraz(double a, double b) {
-	if (b == 0) {
-		std::cout << "Zly dzielnik";
-	} else {
-		pamiec = a / b;
-		std::cout << pamiec << std::endl;
-	}
-	pamiec_uzyta = true;
-	return pamiec;
-}
-double modulo(double a, double b) {
-	if (b == 0) {
-		std::cout << "Zly dzielnik";
-	} else {
-		pamiec = (int)a % (int)b;
-		std::cout << pamiec << std::endl;
-		pamiec_uzyta = true;
-	}
-	return pamiec;
-}
+class Calculator {
+private:
+	double mem;
+	bool mem_used;
 
-void operacje() {
-	std::cout << "Wybierz opcje : ";
-	int opcja;
-	std::cin >> opcja;
-	std::cout << "Wprowadz dwie liczby: ";
-	switch (opcja)
-	{
+public:
+	Calculator() : mem(0), mem_used(false) {}
+
+	double add(double a, double b) {
+		mem = a + b;
+		mem_used = true;
+		return mem;
+	}
+
+	double sub(double a, double b) {
+		mem = a - b;
+		mem_used = true;
+		return mem;
+	}
+
+	double mult(double a, double b) {
+		mem = a * b;
+		mem_used = true;
+		return mem;
+	}
+
+	double div(double a, double b) {
+		if (b != 0) {
+			mem = a / b;
+			mem_used = true;
+			return mem;
+		}
+		else {
+			std::cout << "Niepoprawny dzielnik" << std::endl;
+			return 0;
+		}
+	}
+
+	double mod(double a, double b) {
+		if (b > 0) {
+			mem = (int)a % (int)b;
+			mem_used = true;
+			return mem;
+		}
+		else {
+			std::cout << "Niepoprawny dzielnik" << std::endl;
+			return 0;
+		}
+	}
+
+	void clear_mem() {
+		mem = 0;
+		mem_used = false;
+	}
+};
+
+void function(Calculator& calc) {
+	Menu();
+	std::cin >> n;
+	switch (n) {
 	case 1:
-		
+		std::cout << "Wprowadz 2 liczby: " << std::endl;
 		std::cin >> a >> b;
-		dodawanie(a, b);
-		Menu();
-		operacje();
+		calc.add(a, b);
+		function(calc);
+		break;
 	case 2:
+		std::cout << "Wprowadz 2 liczby: " << std::endl;
 		std::cin >> a >> b;
-		odejmowanie(a, b);
-		Menu();
-		operacje();
-
+		calc.sub(a, b);
+		function(calc);
+		break;
 	case 3:
+		std::cout << "Wprowadz 2 liczby: " << std::endl;
 		std::cin >> a >> b;
-		iloczyn(a, b);
-		Menu();
-		operacje();
-
+		calc.mult(a, b);
+		function(calc);
+		break;
 	case 4:
+		std::cout << "Wprowadz 2 liczby: " << std::endl;
 		std::cin >> a >> b;
-		iloraz(a, b);
-		Menu();
-		operacje();
-
+		calc.div(a, b);
+		function(calc);
+		break;
 	case 5:
+		std::cout << "Wprowadz 2 liczby: " << std::endl;
 		std::cin >> a >> b;
-		modulo(a, b);
-		Menu();
-		operacje();
-
+		calc.mod(a, b);
+		function(calc);
+		break;
 	case 6:
-		wyczysc();
-		Menu();
-		operacje();
-
+		calc.clear_mem();
+		function(calc);
+		break;
 	case 7:
 		break;
 	}
@@ -106,6 +116,7 @@ void operacje() {
 
 
 int main() {
-	Menu();
-	operacje();
+	Calculator calc;
+	function(calc);
+	return 0;
 }
