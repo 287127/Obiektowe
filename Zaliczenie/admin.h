@@ -1,0 +1,94 @@
+#ifndef ADMIN_H
+#define ADMIN_H
+
+#include <QMainWindow>
+#include <QDialog>
+#include <QSql>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <qsqlquerymodel.h>
+
+namespace Ui {
+class Admin;
+}
+
+class Admin : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit Admin(QWidget *parent = nullptr);
+    ~Admin();
+    QSqlQueryModel *UsrModel;
+    QSqlQueryModel *SchdModel;
+    QSqlQueryModel *SubjModel;
+    QSqlQueryModel *ClassModel;
+
+
+private slots:
+
+    void on_AdminLogoutBtn_clicked();
+
+    void on_AdminUsrBtn_toggled(bool checked);
+
+    void on_AdminClassBtn_toggled(bool checked);
+
+    void on_AdminSubjBtn_toggled(bool checked);
+
+    void on_AdminSchdBtn_toggled(bool checked);
+
+    void on_AdminAddUsrBtn_clicked();
+
+    void on_AdminDelUsrBtn_clicked();
+
+    void on_AdminEditUsrBtn_clicked();
+
+    void on_AdminAddClassBtn_clicked();
+
+    void on_AdminDelClassBtn_clicked();
+
+    void on_AdminEditClassBtn_clicked();
+
+    void on_AdminAddSubjBtn_clicked();
+
+    void on_AdminDelSubjBtn_clicked();
+
+    void on_AdminEditSubjBtn_clicked();
+
+    void on_AdminAddSchdBtn_clicked();
+
+    void on_AdminDelSchdBtn_clicked();
+
+    void on_AdminEditSchdBtn_clicked();
+
+private:
+
+    Ui::Admin *AdminUi;
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    int db_create_rest(QSqlDatabase db, Ui::Admin *AdminUi);
+
+    void db_usr_list (QSqlDatabase db, Ui::Admin *AdminUi, QSqlQueryModel *model);
+    void db_add_usr(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_del_usr(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_edit_usr(QSqlDatabase db, Ui::Admin *AdminUi);
+
+    void db_subj_list (QSqlDatabase db, Ui::Admin *AdminUi, QSqlQueryModel *model);
+    void db_add_subj(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_del_subj(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_edit_subj(QSqlDatabase db, Ui::Admin *uAdminUii);
+
+    void db_schd_list (QSqlDatabase db, Ui::Admin *AdminUi, QSqlQueryModel *model);
+    void db_add_schd(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_del_schd(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_edit_schd(QSqlDatabase db, Ui::Admin *AdminUi);
+
+    void db_class_list (QSqlDatabase db, Ui::Admin *AdminUi, QSqlQueryModel *model);
+    void db_add_class(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_del_class(QSqlDatabase db, Ui::Admin *AdminUi);
+    void db_edit_class(QSqlDatabase db, Ui::Admin *AdminUi);
+};
+
+#endif // ADMIN_H
