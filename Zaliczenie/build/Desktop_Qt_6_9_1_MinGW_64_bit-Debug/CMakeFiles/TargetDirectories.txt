@@ -1,9 +1,0 @@
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/GradeFlow.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/GradeFlow_autogen_timestamp_deps.dir
-C:/Users/Alexx/Desktop/zalGRADEFLOW/GradeFlow/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/GradeFlow_autogen.dir
